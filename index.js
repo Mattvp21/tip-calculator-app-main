@@ -1,3 +1,5 @@
+'use strict'
+
 const bill = document.getElementById('bill')
 const people = document.getElementById('people');
 //  tip buttons
@@ -22,7 +24,9 @@ let tipValue = {
 
 
 
+
 function fivePercent() { 
+    
     tipTotal.innerHTML = "$" + ((bill.value * tipValue.fivePercent) / people.value).toFixed(2);
 }
 
@@ -63,6 +67,15 @@ function totalHandler() {
         totalAmount.innerHTML ='$0.00'
     } else {
         document.getElementById('people').style.outlineColor = 'lightGreen';
+        document.getElementById('warning').style.display = 'none'
+    }
+
+    if(billValue === "0") {
+        document.getElementById('bill').style.outlineColor = 'red';
+        document.getElementById('warning').style.display = 'block'
+        totalAmount.innerHTML ='$0.00'
+    } else {
+        document.getElementById('bill').style.outlineColor = 'lightGreen';
         document.getElementById('warning').style.display = 'none'
     }
 }
