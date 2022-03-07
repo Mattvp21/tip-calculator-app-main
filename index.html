@@ -19,62 +19,45 @@
 <body>
 <div class="wrapper">
   <h1 class="heading">SPLI<br>TTER</h1>
-  <div class="container">
-    <div class="container-input">
-    <form class="form-group">
-      <label class="label-title" for="bill"> Bill</label>
-      
-      <input oninput="customValue()" class="input-section dollar" id="bill" type="number" min="0" placeholder="0.00" onchange="" value="">
-    </form>
-
+    <div class="container">
+      <div class="container-input">
+      <form class="form-group">
+        <label class="label-title" for="bill"> Bill</label>
+        <input oninput="customValue()" class="input-section dollar" id="bill" type="number" min="0" placeholder="0.00" onchange="" value="">
+      </form>
     
+      <div class="button-group">
+        <span class="label-title">Select Tip %</span>
+          <button onclick="fivePercent()" type="submit" id=".05" class="btn tip-btn" value=".05">5%</button>
+          <button onclick="tenPercent()" id=".10" class="btn tip-btn" value=".10">10%</button>
+          <button onclick="fifteenPercent()" id=".15" class="btn tip-btn" value=".15">15%</button>  
+          <button onClick="twentyFivePercent()" id=".25" class="btn tip-btn" value=".25">25%</button>
+          <button onClick="fiftyPercent()" id=".50" class="btn tip-btn" value=".50">50%</button>
+          <input oninput="customValue()" id="custom" type="number" min="0" placeholder="custom" class="custom btn" value="">
+      </div>
 
-    <div class="button-group">
-      <span class="label-title">Select Tip %</span>
-      
-        <button onclick="fivePercent()" type="submit" id=".05" class="btn tip-btn" value=".05">5%</button>
-        <button onclick="tenPercent()" id=".10" class="btn tip-btn" value=".10">10%</button>
-        <button onclick="fifteenPercent()" id=".15" class="btn tip-btn" value=".15">15%</button>
-      
-      
-        <button onClick="twentyFivePercent()" id=".25" class="btn tip-btn" value=".25">25%</button>
-        <button onClick="fiftyPercent()" id=".50" class="btn tip-btn" value=".50">50%</button>
-        <input oninput="customValue()" id="custom" type="number" min="0" placeholder="custom" class="custom btn" value="">
-      
-      
-    </div>
-
-    <div class="form-group">
-      
-      <label class="label-title" for="people">Number of People</label>
-      <span id="warning">Number cannot be zero</span>
-      <input oninput='customValue()'  class="input-section people" id="people" type="number" placeholder="1" min="1" value="1" onchange=>
-    </div> 
+      <div class="form-group">
+        <label class="label-title" for="people">Number of People</label>
+        <span id="warning">Number cannot be zero</span>
+        <input oninput='customValue()'  class="input-section people" id="people" type="number" placeholder="1" min="1" value="1" onchange=>
+      </div> 
        
     </div>
     <div class="container-result">
       <div class="tip-total">
         <span class="result-header">Tip Amount</span>
         <span class="result-person">/ person</span>
-        <span id="tiptotal" class="result">$0.00</span>
-        
+        <span id="tiptotal" class="result">$0.00</span>  
       </div>
    
-
       <div class="result-total">
         <span class="result-header">Total</span>
         <span class="result-person">/ person</span>
         <span id="totalamount" class="result">$0.00</span>
       </div>
 
-  <button onclick="resetHandler()" class="reset-btn">Reset</button>
+      <button onclick="resetHandler()" class="reset-btn">Reset</button>
     </div>
- 
-
-  
-  </div>
-  
-
 </div>
 
 <div class="attribution">
